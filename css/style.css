@@ -5,7 +5,6 @@
 }
 
 /* Universal Style */
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -44,7 +43,6 @@ img {
 }
 
 /* Navbar */
-
 .navbar {
     background-color: var(--primary-color);
     color: #fff;
@@ -70,7 +68,6 @@ img {
 }
 
 /* Showcase */
-
 .showcase {
     height: 400px;
     background-color: var(--primary-color);
@@ -134,7 +131,6 @@ img {
 }
 
 /* Stats */
-
 .stats {
     padding-top: 100px;
 }
@@ -148,8 +144,27 @@ img {
     font-size: 35px;
 }
 
-.stats .grid .p {
+.stats .grid p {
     font-size: 20px;
     font-weight: bold;
 }
 
+/* Cli */
+/* 3 columns of the same width and 2 rows of the same width */
+.cli .grid {    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+/* Targets the first child of .cli .grid which happens to be an image.
+ The image is spanning across two columns starting at col 1
+ and spanning down over two rows starting at 1*/
+.cli .grid > *:first-child {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+/* Cloud */
+.cloud .grid {
+    grid-template-columns: 4fr 3fr;
+}
