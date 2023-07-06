@@ -109,9 +109,13 @@
 }
 
 /* Margin */
-
-.my-1 {             /* Adds a margin to the first h3 of the stats section. */
-    margin: 1rem 0; /* 1rem is equal to 16px unless otherwise specified. */
+ /* Adds a margin to the first h3 of the stats section. (It's supposed to but for some 
+ reason it adds a huge margin to the right of the h3 element as well. To fix this I changed
+ the <h3 class="stats-heading text-center my-1"> in the stats section to <h3...y-1">
+ 1rem is equal to 16px unless otherwise specified. */
+.my-1 {            
+    /* padding: 1rem 0; */
+    margin: 1rem 0; 
 }
 
 .my-2 {
